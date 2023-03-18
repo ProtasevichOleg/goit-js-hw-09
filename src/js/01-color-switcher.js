@@ -15,18 +15,18 @@ setColorSwitchState(false);
 refs.startBtnEl.addEventListener('click', startColorSwitch);
 refs.stopBtnEl.addEventListener('click', stopColorSwitch);
 
-const startColorSwitch = () => {
+function startColorSwitch() {
   setColorSwitchState(true);
 
   colorSwitchIntervalId = setInterval(() => {
     currentColor = getRandomHexColor();
     setBodyBgColor(currentColor);
   }, 1000);
-};
+}
 
-const stopColorSwitch = () => {
+function stopColorSwitch() {
   setColorSwitchState(false);
 
   clearInterval(colorSwitchIntervalId);
   if (currentColor) setBodyBgColor(currentColor);
-};
+}
