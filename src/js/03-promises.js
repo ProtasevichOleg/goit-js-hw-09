@@ -1,5 +1,3 @@
-// ../03-promises.js
-
 import { onPromiseFormSubmit } from './utils/promiseHelpers';
 
 const form = document.querySelector('.form');
